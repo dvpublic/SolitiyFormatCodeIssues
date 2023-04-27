@@ -53,4 +53,16 @@ contract Deconstruction {
 
     return (c, d, e);
   }
+
+  function f4(uint amount_, bool updateTotalAssetsBeforeInvest_) internal returns (
+    uint loss
+  ) {
+    uint a;
+    (a, loss,) = f2(1, 2);
+//    if (a > loss) {
+//      if (a != 0) {
+//        loss += 3;
+//      }
+//    }
+  }
 }
