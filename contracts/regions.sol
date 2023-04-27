@@ -15,13 +15,15 @@ contract Regions {
   //----------------------------------------------------------------
   // support of region with #, see comment to https://github.com/intellij-solidity/intellij-solidity/issues/364
 
-  // #region A1
+  //#region A1
   /// @notice This is constructor
   /// @param amount_ Comment to the amount
   constructor(uint amount_) {
+    //#region B1
     amount = amount_;
+    //#endregion
   }
-  // #endregion A1
+  //#endregion A1
 
 
   //----------------------------------------------------------------
