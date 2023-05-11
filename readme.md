@@ -1,0 +1,1 @@
+﻿A project to test IntelliJ solidity plugin issues.
