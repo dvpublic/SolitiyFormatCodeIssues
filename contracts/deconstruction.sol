@@ -44,12 +44,12 @@ contract Deconstruction {
     );
 
     (v1,
-     v2,
-     v3) = f3(a_, b_);
+      v2,
+      v3) = f3(a_, b_);
 
     (v1,
-     ,
-     v3) = f3(a_, b_);
+      ,
+      v3) = f3(a_, b_);
 
     return (c, d, e);
   }
@@ -64,5 +64,24 @@ contract Deconstruction {
 //        loss += 3;
 //      }
 //    }
+  }
+
+  function get_addresses() internal view returns (address, address, address) {
+    return (address(0), address(0), address(0));
+  }
+
+  function use_addresses() internal view returns (uint) {
+    (address a,
+      address b,
+      address c
+    ) = get_addresses();
+    return 1;
+  }
+
+  function use_addresses_2() internal view returns (uint) {
+    (address a,
+      address b,
+      address c) = get_addresses();
+    return 1;
   }
 }
