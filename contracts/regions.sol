@@ -25,7 +25,6 @@ contract Regions {
   }
   //#endregion A1
 
-
   //----------------------------------------------------------------
   // support of embedded regions
 
