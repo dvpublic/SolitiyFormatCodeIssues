@@ -16,7 +16,7 @@ contract HeirExample is IInterfaceExample1, IInterfaceExample2 {
   uint public override uintField;
   address public override addressField;
   mapping(uint => address) public override(IInterfaceExample1, IInterfaceExample2) mappingField;
-  function ordinalFunction() external view external returns (uint) {
+  function ordinalFunction() external view returns (uint) {
     return 0;
   }
 }

@@ -48,7 +48,7 @@ contract Deconstruction {
       v3) = f3(a_, b_);
 
     (v1,
-      ,
+    ,
       v3) = f3(a_, b_);
 
     return (c, d, e);

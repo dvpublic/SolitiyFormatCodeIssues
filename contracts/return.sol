@@ -6,15 +6,15 @@ contract Return {
     uint a = 1;
     uint b = 2;
     return a
-    + b;
+      + b;
   }
 
   function f2_single_expression() internal view returns (uint) {
     uint a = 1;
     uint b = 2;
     return
-    a
-    + b;
+      a
+      + b;
   }
 
   function f2_with_comments() internal view returns (uint) {
@@ -22,8 +22,8 @@ contract Return {
     uint b = 2;
     return // comment
     // comment
-    a // comment
-    + b; // comment
+      a // comment
+      + b; // comment
   }
 
   function f4_multy_return() internal view returns (uint, uint) {

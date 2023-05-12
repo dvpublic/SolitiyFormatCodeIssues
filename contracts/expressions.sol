@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
-contract Return {
+import "./integration/IBVault.sol";
+
+contract Expressions {
   function f1() internal view returns (bool canExecOut) {
     uint outPoolAdapters = 1;
     uint newNextIndexToCheck0 = 2;
@@ -17,5 +19,27 @@ contract Return {
 
     // ... if it's the time to recalculate blocksPerDay value
       || (outPoolAdapters != 0 && outPoolAdapters != 5);
+  }
+
+  function f2(uint, uint, uint) internal {
+
+  }
+
+  function f2(uint, uint, IBVault.ExitPoolRequest memory) internal {}
+
+  function f3(uint value, uint amount) internal {
+    f2(
+      0,
+      1,
+      IBVault.ExitPoolRequest({
+        assets: new IAsset[](0),
+        minAmountsOut: new uint[](1),
+        userData: abi.encode(
+          value,
+          amount
+        ),
+        toInternalBalance: false
+      })
+    );
   }
 }
