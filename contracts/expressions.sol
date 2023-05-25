@@ -14,10 +14,10 @@ contract Expressions {
     // ... if there is unhealthy pool adapter
       outPoolAdapters != 0
 
-    // ... if we cannot check all adapters in one pass; we've checked a one portion, now we need to check the other portions
+      // ... if we cannot check all adapters in one pass; we've checked a one portion, now we need to check the other portions
       || newNextIndexToCheck0 != startIndex
 
-    // ... if it's the time to recalculate blocksPerDay value
+      // ... if it's the time to recalculate blocksPerDay value
       || (outPoolAdapters != 0 && outPoolAdapters != 5);
   }
 
