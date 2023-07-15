@@ -21,6 +21,6 @@ contract C is B {
   function que() view internal {
     A.S memory shouldBeA;
     S memory whichOne;
-    whichOne.
+    whichOne.b = 0;
   }
 }
