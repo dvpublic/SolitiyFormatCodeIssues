@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
+import "./interfaces/IAppErrors.sol";
+
 contract StructExample {
   /// @notice Multiline comment Multiline comment Multiline comment Multiline comment Multiline comment Multiline
   ///         to the struct
@@ -26,6 +28,8 @@ contract StructExample {
       address1: a_.address1,
       balances: a_.balances
     });
+
+    if (b.address1 == address(0)) revert IAppErrors.ZeroAddress();
 
     return DataType({
       amount: a_.amount,
