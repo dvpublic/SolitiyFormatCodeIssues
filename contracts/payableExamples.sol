@@ -22,5 +22,8 @@ contract PayableExamples {
 
     // case 4: cast payable => B
     B(payable(b)).mint();
+
+    // case 5: cast payable => A
+    A(payable(b)).mint();
   }
 }
