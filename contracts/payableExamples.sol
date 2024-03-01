@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
 
 interface A {
   function mint() external payable;
@@ -9,7 +11,7 @@ contract B is A {
 }
 
 contract PayableExamples {
-  function useAB(address addressB, B b) external {
+  function useAB(address addressB, B b, A a) external {
 
     // case 1: cast not-payable => A
     A(addressB).mint();
@@ -25,5 +27,8 @@ contract PayableExamples {
 
     // case 5: cast payable => A
     A(payable(b)).mint();
+
+    // case 6: cast address => payable => A
+    A(payable(addressB)).mint();
   }
 }
