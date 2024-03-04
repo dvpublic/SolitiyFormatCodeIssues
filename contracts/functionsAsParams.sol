@@ -14,4 +14,8 @@ contract FunctionsAsParams {
   function _callForAddress(bytes32 param_) internal view returns (address) {
     return _callForAddress(param_, SlotsLib.getAddress);
   }
+
+  function _getBuild() internal view returns (uint) {
+    return SlotsLib.SLOT_LIB_VERSION_INTERNAL;
+  }
 }
