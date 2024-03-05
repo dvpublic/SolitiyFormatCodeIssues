@@ -25,6 +25,12 @@ library SlotsLib {
     }
   }
 
+  function getAddressPrivate(bytes32 slot) private view returns (address result) {
+    assembly {
+      result := sload(slot)
+    }
+  }
+
   /// @dev Gets a slot as uint256
   function getUint(bytes32 slot) internal view returns (uint result) {
     assembly {

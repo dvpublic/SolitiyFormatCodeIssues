@@ -12,6 +12,8 @@ contract FunctionsAsParams {
   }
 
   function _callForAddress(bytes32 param_) internal view returns (address) {
+    SlotsLib.getAddress(param_);
+    // SlotsLib.getAddressPrivate(param_); // Compilation error: Member "getAddressPrivate" not found or not visible after argument-dependent lookup
     return _callForAddress(param_, SlotsLib.getAddress);
   }
 }
