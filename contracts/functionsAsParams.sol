@@ -16,4 +16,8 @@ contract FunctionsAsParams {
     // SlotsLib.getAddressPrivate(param_); // Compilation error: Member "getAddressPrivate" not found or not visible after argument-dependent lookup
     return _callForAddress(param_, SlotsLib.getAddress);
   }
+
+  function _getBuild() internal view returns (uint) {
+    return SlotsLib.SLOT_LIB_VERSION_INTERNAL;
+  }
 }

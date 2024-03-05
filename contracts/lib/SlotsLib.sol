@@ -9,6 +9,8 @@ library SlotsLib {
   /// @dev Should be incremented when contract changed
   string public constant SLOT_LIB_VERSION = "1.0.0";
 
+  uint internal constant SLOT_LIB_VERSION_INTERNAL = 1;
+
   // ************* GETTERS *******************
 
   /// @dev Gets a slot as bytes32
