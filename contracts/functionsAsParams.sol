@@ -26,10 +26,10 @@ contract FunctionsAsParams {
     return _callForAddress(param_, SlotsLib.getAddress);
   }
 
-  function _testCallForAddressExternal(bytes32 param_) internal view returns (address) {
-    _callForAddressExternal(param_, SlotsLib.getAddress); // TypeError: Invalid type for argument in function call. Invalid implicit conversion from function (bytes32) view returns (address) to function (bytes32) view external returns (address) requested. Special functions can not be conv erted to function types.
-    return _callForAddressExternal(param_, SlotsLib.getAddressExternal);
-  }
+  // function _testCallForAddressExternal(bytes32 param_) internal view returns (address) {
+    // _callForAddressExternal(param_, SlotsLib.getAddress); // TypeError: Invalid type for argument in function call. Invalid implicit conversion from function (bytes32) view returns (address) to function (bytes32) view external returns (address) requested. Special functions can not be conv erted to function types.
+    // return _callForAddressExternal(param_, SlotsLib.getAddressExternal); // TypeError: Invalid type for argument in function call. Invalid implicit conversion from function (bytes32) view returns (address) to function (bytes32) view external returns (address) requested
+  // }
 
   function _getBuild() internal view returns (uint) {
     return SlotsLib.SLOT_LIB_VERSION_INTERNAL;
